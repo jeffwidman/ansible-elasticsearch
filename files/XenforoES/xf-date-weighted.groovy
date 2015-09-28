@@ -1,0 +1,1 @@
+_score / pow(2.0F, min(10.0F * halflife, abs(now - doc['date'].value)) / halflife)

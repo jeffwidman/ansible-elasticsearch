@@ -1,0 +1,24 @@
+---
+# defaults file for elasticsearch
+
+xenforo: False # When True, installs the XF ES script
+
+java_version: java-1.8.0-openjdk
+
+# Elasticsearch maintains separate repos for each major version.
+# Before doing a major version upgrade, probably best to uninstall existing
+# elasticsearch: `yum remove elasticsearch`
+# Then update the version number here, which updates the info in
+# /etc/yum.repos.d/elasticsearch.repo to point to repo for the new version.
+elasticsearch_version: 1.7
+
+# ES_HEAP_SIZE: https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html
+# For Xenforo, use ~ 90MB per 1M forum posts, with a minimum of 256MB
+# Per https://xenforo.com/community/threads/scaling-database.98161/#post-945458
+es_heap_size: 256m # Example: '512m' or '1g' with no quotes
+
+es_network:
+  host: '127.0.0.1'
+es_index:
+  number_of_shards: 1
+  number_of_replicas: 0
