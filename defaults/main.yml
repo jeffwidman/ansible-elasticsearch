@@ -10,7 +10,7 @@ java_version: java-1.8.0-openjdk
 # elasticsearch: `yum remove elasticsearch`
 # Then update the version number here, which updates the info in
 # /etc/yum.repos.d/elasticsearch.repo to point to repo for the new version.
-elasticsearch_version: 1.7
+elasticsearch_version: 2.x
 
 # ES_HEAP_SIZE: https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html
 # For Xenforo, use ~ 90MB per 1M forum posts, with a minimum of 256MB
