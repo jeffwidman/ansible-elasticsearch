@@ -27,9 +27,9 @@
     line: "{{ item.line }}"
     state: present
   with_items:
-    - { regexp: '^#?network\.host', line: 'network.host: {{ es_network.host}}' }
-    - { regexp: '^#?index\.number_of_shards:', line: 'index.number_of_shards: {{ es_index.number_of_shards }}' }
-    - { regexp: '^#?index\.number_of_replicas:', line: 'index.number_of_replicas: {{es_index.number_of_replicas }}' }
+    - { regexp: '^#? ?network\.host', line: 'network.host: {{ es_network.host}}' }
+    - { regexp: '^#? ?index\.number_of_shards:', line: 'index.number_of_shards: {{ es_index.number_of_shards }}' }
+    - { regexp: '^#? ?index\.number_of_replicas:', line: 'index.number_of_replicas: {{es_index.number_of_replicas }}' }
   notify: restart elasticsearch
 
 - name: change Elastic Search Heap size to {{ es_heap_size }}
